@@ -1,4 +1,4 @@
-# delirium-orb-comparison
+# Delirium Orb Comparison
 
 This program calculates how much you could earn from the different Delirium Orb types in Path Of Exile per run. The profit is calculated based on the prices of poe.ninja and the google sheet of Grimro to get the estimated drops per map. Only the delirium rewards are calculated into the profit so normal map drops are not being calculated into that. 
 
