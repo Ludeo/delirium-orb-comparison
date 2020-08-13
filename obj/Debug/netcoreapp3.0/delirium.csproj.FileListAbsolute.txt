@@ -1,0 +1,13 @@
+C:\Users\lucas\source\repos\delirium\bin\Debug\netcoreapp3.0\delirium.exe
+C:\Users\lucas\source\repos\delirium\obj\Debug\netcoreapp3.0\delirium.AssemblyInfoInputs.cache
+C:\Users\lucas\source\repos\delirium\obj\Debug\netcoreapp3.0\delirium.AssemblyInfo.cs
+C:\Users\lucas\source\repos\delirium\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\lucas\source\repos\delirium\obj\Debug\netcoreapp3.0\delirium.csproj.CopyComplete
+C:\Users\lucas\source\repos\delirium\bin\Debug\netcoreapp3.0\delirium.deps.json
+C:\Users\lucas\source\repos\delirium\bin\Debug\netcoreapp3.0\delirium.runtimeconfig.json
+C:\Users\lucas\source\repos\delirium\bin\Debug\netcoreapp3.0\delirium.runtimeconfig.dev.json
+C:\Users\lucas\source\repos\delirium\bin\Debug\netcoreapp3.0\delirium.dll
+C:\Users\lucas\source\repos\delirium\bin\Debug\netcoreapp3.0\delirium.pdb
+C:\Users\lucas\source\repos\delirium\obj\Debug\netcoreapp3.0\delirium.dll
+C:\Users\lucas\source\repos\delirium\obj\Debug\netcoreapp3.0\delirium.pdb
+C:\Users\lucas\source\repos\delirium\obj\Debug\netcoreapp3.0\delirium.csprojAssemblyReference.cache
