@@ -11,3 +11,4 @@ C:\Users\lucas\source\repos\delirium\bin\Debug\netcoreapp3.0\delirium.pdb
 C:\Users\lucas\source\repos\delirium\obj\Debug\netcoreapp3.0\delirium.dll
 C:\Users\lucas\source\repos\delirium\obj\Debug\netcoreapp3.0\delirium.pdb
 C:\Users\lucas\source\repos\delirium\obj\Debug\netcoreapp3.0\delirium.csprojAssemblyReference.cache
+C:\Users\lucas\source\repos\delirium\bin\Debug\netcoreapp3.0\System.Web.Razor.dll
