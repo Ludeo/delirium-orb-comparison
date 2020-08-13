@@ -9,7 +9,7 @@ Here is a preview of the program
 
 ![preview](https://i.imgur.com/x5MjoEQ.png) 
 
-The result has different colors, blue means it's the most profitable one, green is the second best, yellow is the 3rd best and everything that is more than 20c profit and red means you are getting 20c or less per map.
+The result has different colors, blue means it's the most profitable one, green is the second best, yellow is the 3rd best and everything that is more than 20c profit and red means you are getting 20c or less profit per map.
 
 Of course the result is not 100% reliable since it's not using the official drop rates of items but a player experience who ran the map himself.
 
