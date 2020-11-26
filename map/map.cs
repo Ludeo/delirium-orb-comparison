@@ -6,6 +6,15 @@
 //
 //    var map = Map.FromJson(jsonString);
 
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Globalization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Net;
+
+
 namespace map
 {
     using System;
@@ -124,7 +133,7 @@ namespace map
     public partial class Sparkline
     {
         [JsonProperty("data")]
-        public List<double> Data { get; set; }
+        public List<double?> Data { get; set; }
 
         [JsonProperty("totalChange")]
         public double TotalChange { get; set; }
@@ -134,7 +143,9 @@ namespace map
 
     public enum MapRegion { GlennachCairns, HaewarkHamlet, LexEjoris, LexProxima, LiraArthain, NewVastir, TirnSEnd, ValdoSRest };
 
-    public enum Variant { Harvest };
+
+    //add a new league here
+    public enum Variant { Atlas, Atlas2, Atlas234, Blight, Delerium, Harvest, Legion, Metamorph, Pre20, Pre24, Synthesis, Heist };
 
     public partial class Map
     {
@@ -275,9 +286,34 @@ namespace map
         {
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
-            if (value == "Harvest")
+            switch (value)
             {
-                return Variant.Harvest;
+
+                //add a new league here
+                case "Atlas":
+                    return Variant.Atlas;
+                case "Atlas2":
+                    return Variant.Atlas2;
+                case "Atlas2-3.4":
+                    return Variant.Atlas234;
+                case "Blight":
+                    return Variant.Blight;
+                case "Delerium":
+                    return Variant.Delerium;
+                case "Harvest":
+                    return Variant.Harvest;
+                case "Legion":
+                    return Variant.Legion;
+                case "Metamorph":
+                    return Variant.Metamorph;
+                case "Pre 2.0":
+                    return Variant.Pre20;
+                case "Pre 2.4":
+                    return Variant.Pre24;
+                case "Synthesis":
+                    return Variant.Synthesis;
+                case "Heist":
+                    return Variant.Heist;
             }
             throw new Exception("Cannot unmarshal type Variant");
         }
@@ -290,10 +326,45 @@ namespace map
                 return;
             }
             var value = (Variant)untypedValue;
-            if (value == Variant.Harvest)
+            switch (value)
             {
-                serializer.Serialize(writer, "Harvest");
-                return;
+                //add a new league here
+                case Variant.Atlas:
+                    serializer.Serialize(writer, "Atlas");
+                    return;
+                case Variant.Atlas2:
+                    serializer.Serialize(writer, "Atlas2");
+                    return;
+                case Variant.Atlas234:
+                    serializer.Serialize(writer, "Atlas2-3.4");
+                    return;
+                case Variant.Blight:
+                    serializer.Serialize(writer, "Blight");
+                    return;
+                case Variant.Delerium:
+                    serializer.Serialize(writer, "Delerium");
+                    return;
+                case Variant.Harvest:
+                    serializer.Serialize(writer, "Harvest");
+                    return;
+                case Variant.Legion:
+                    serializer.Serialize(writer, "Legion");
+                    return;
+                case Variant.Metamorph:
+                    serializer.Serialize(writer, "Metamorph");
+                    return;
+                case Variant.Pre20:
+                    serializer.Serialize(writer, "Pre 2.0");
+                    return;
+                case Variant.Pre24:
+                    serializer.Serialize(writer, "Pre 2.4");
+                    return;
+                case Variant.Synthesis:
+                    serializer.Serialize(writer, "Synthesis");
+                    return;
+                case Variant.Heist:
+                    serializer.Serialize(writer, "Heist");
+                    return;
             }
             throw new Exception("Cannot marshal type Variant");
         }

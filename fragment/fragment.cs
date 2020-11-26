@@ -100,7 +100,7 @@ namespace fragment
     public partial class ReceiveSparkLine
     {
         [JsonProperty("data")]
-        public List<double> Data { get; set; }
+        public List<double?> Data { get; set; }
 
         [JsonProperty("totalChange")]
         public double TotalChange { get; set; }

@@ -8,14 +8,14 @@ using System.Net;
 
 namespace delirium
 {
-    class main
+    public class main
     {
 
         public static String league { get; private set;}
 
         static public void Main(String [] args)
         {
-            league = "Harvest";
+            league = "Heist";
 
             var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league="+league+"&type=Fossil&language=en");
             var data1 = fossil.Fossil.FromJson(result1);

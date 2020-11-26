@@ -133,7 +133,7 @@ namespace scarab
     public partial class Sparkline
     {
         [JsonProperty("data")]
-        public List<double> Data { get; set; }
+        public List<double?> Data { get; set; }
 
         [JsonProperty("totalChange")]
         public double TotalChange { get; set; }
