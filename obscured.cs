@@ -7,16 +7,16 @@ using Newtonsoft.Json.Converters;
 using System.Net;
 
 
-namespace delirium
+namespace Delirium
 {
     public class obscuredcalc
     {
         public static double calc()
         {
-            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + main.league + "&type=Currency&language=en");
+            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + Program.League + "&type=Currency&language=en");
             var data1 = currency.Currency.FromJson(result1);
 
-            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + main.league + "&type=Fragment&language=en");
+            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + Program.League + "&type=Fragment&language=en");
             var data2 = fragment.Fragment.FromJson(result2);
 
             double chayu1 = 0.0, chayu2 = 0.0, chayu3 = 0.0, chayu4 = 0.0, chayu5 = 0.0;

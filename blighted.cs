@@ -6,17 +6,17 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Net;
 
-namespace delirium
+namespace Delirium
 {
     public class blightedcalc
     {
 
         public static double calc()
         {
-            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + main.league + "&type=Map&language=en");
+            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + Program.League + "&type=Map&language=en");
             var data1 = map.Map.FromJson(result1);
 
-            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + main.league + "&type=Oil&language=en");
+            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + Program.League + "&type=Oil&language=en");
             var data2 = map.Map.FromJson(result2);
 
             double bmap1 = 0.0, bmap2 = 0.0, bmap3 = 0.0, bmap4 = 0.0, bmap5 = 0.0, bmap6 = 0.0;

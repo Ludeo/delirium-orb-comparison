@@ -6,14 +6,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Net;
 
-namespace delirium
+namespace Delirium
 {
     public class whisperingcalc
     {
 
         public static double calc()
         {
-            var result = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + main.league + "&type=Essence&language=en");
+            var result = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + Program.League + "&type=Essence&language=en");
             var data = essence.Essence.FromJson(result);
 
             double ess1 = 0.0, ess2 = 0.0, ess3 = 0.0, ess4 = 0.0, ess5 = 0.0, ess6 = 0.0, ess7 = 0.0, ess8 = 0.0, ess9 = 0.0, ess10 = 0.0, ess11 = 0.0, ess12 = 0.0, ess13 = 0.0, ess14 = 0.0,

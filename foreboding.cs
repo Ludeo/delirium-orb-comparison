@@ -6,17 +6,17 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Net;
 
-namespace delirium
+namespace Delirium
 {
     public class forebodingcalc
     {
 
         public static double calc()
         {
-            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + main.league + "&type=Currency&language=en");
+            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + Program.League + "&type=Currency&language=en");
             var data1 = currency.Currency.FromJson(result1);
 
-            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + main.league + "&type=UniqueMap&language=en");
+            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + Program.League + "&type=UniqueMap&language=en");
             var data2 = uniquemap.UniqueMap.FromJson(result2);
 
             double harb1 = 0.0, harb2 = 0.0, harb3 = 0.0, harb4 = 0.0, harb5 = 0.0, harb6 = 0.0;

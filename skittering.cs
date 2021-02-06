@@ -6,14 +6,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Net;
 
-namespace delirium
+namespace Delirium
 {
     public class skitteringcalc
     {
 
         public static double calc()
         {
-            var result = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league="+main.league+"&type=Scarab&language=en");
+            var result = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league="+Program.League+"&type=Scarab&language=en");
             var data = scarab.Scarab.FromJson(result);
 
             double rscarab1 = 0.0, rscarab2 = 0.0, rscarab3 = 0.0, rscarab4 = 0.0, rscarab5 = 0.0, rscarab6 = 0.0, rscarab7 = 0.0, rscarab8 = 0.0, rscarab9 = 0.0, rscarab10 = 0.0, rscarab11 = 0.0

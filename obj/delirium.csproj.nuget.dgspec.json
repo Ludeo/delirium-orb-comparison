@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas\\source\\repos\\delirium\\delirium.csproj": {}
+    "C:\\Coding\\C#\\DeliriumOrbComparison\\delirium-orb-comparison\\delirium.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas\\source\\repos\\delirium\\delirium.csproj": {
+    "C:\\Coding\\C#\\DeliriumOrbComparison\\delirium-orb-comparison\\delirium.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\source\\repos\\delirium\\delirium.csproj",
+        "projectUniqueName": "C:\\Coding\\C#\\DeliriumOrbComparison\\delirium-orb-comparison\\delirium.csproj",
         "projectName": "delirium",
-        "projectPath": "C:\\Users\\lucas\\source\\repos\\delirium\\delirium.csproj",
+        "projectPath": "C:\\Coding\\C#\\DeliriumOrbComparison\\delirium-orb-comparison\\delirium.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\source\\repos\\delirium\\obj\\",
+        "outputPath": "C:\\Coding\\C#\\DeliriumOrbComparison\\delirium-orb-comparison\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.0": {
+            "targetAlias": "netcoreapp3.0",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
           "dependencies": {
             "Microsoft.AspNet.Razor": {
               "target": "Package",
@@ -45,6 +47,12 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
             },
             "System.Net.Http": {
               "target": "Package",
@@ -61,12 +69,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.3, 3.0.3]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

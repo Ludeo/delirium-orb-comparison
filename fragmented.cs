@@ -6,14 +6,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Net;
 
-namespace delirium
+namespace Delirium
 {
     public class fragmentedcalc
     {
 
         public static double calc()
         {
-            var result = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + main.league + "&type=Fragment&language=en");
+            var result = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + Program.League + "&type=Fragment&language=en");
             var data = fragment.Fragment.FromJson(result);
 
             double frag1 = 0.0, frag2 = 0.0, frag3 = 0.0, frag4 = 0.0, frag5 = 0.0, frag6 = 0.0, frag7 = 0.0, frag8 = 0.0, frag9 = 0.0, frag10 = 0.0, frag11 = 0.0, frag12 = 0.0, frag13 = 0.0

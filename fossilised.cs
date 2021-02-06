@@ -6,17 +6,17 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Net;
 
-namespace delirium
+namespace Delirium
 {
     public class fossilisedcalc
     {
 
         public static double calc()
         {
-            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + main.league + "&type=Fossil&language=en");
+            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + Program.League + "&type=Fossil&language=en");
             var data1 = fossil.Fossil.FromJson(result1);
 
-            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + main.league + "&type=Resonator&language=en");
+            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + Program.League + "&type=Resonator&language=en");
             var data2 = resonator.Resonator.FromJson(result2);
 
             double fossil1 = 0.0, fossil2 = 0.0, fossil3 = 0.0, fossil4 = 0.0, fossil5 = 0.0, fossil6 = 0.0, fossil7 = 0.0, fossil8 = 0.0, fossil9 = 0.0, fossil10 = 0.0, fossil11 = 0.0

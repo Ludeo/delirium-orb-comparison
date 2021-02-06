@@ -6,17 +6,17 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Net;
 
-namespace delirium
+namespace Delirium
 {
     public class timelesscalc
     {
 
         public static double calc()
         {
-            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league="+main.league+"&type=Fragment&language=en");
+            var result1 = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league="+Program.League+"&type=Fragment&language=en");
             var data1 = fragment.Fragment.FromJson(result1);
 
-            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league="+main.league+"&type=Incubator&language=en");
+            var result2 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league="+Program.League+"&type=Incubator&language=en");
             var data2 = incubator.Incubator.FromJson(result2);
 
             double emblem1 = 0.0, emblem2 = 0.0, emblem3 = 0.0, emblem4 = 0.0, emblem5 = 0.0;

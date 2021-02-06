@@ -6,14 +6,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Net;
 
-namespace delirium
+namespace Delirium
 {
     public class amorphouscalc
     {
 
         public static double calc()
         {
-            var result = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + main.league + "&type=Currency&language=en");
+            var result = new WebClient().DownloadString("https://poe.ninja/api/data/CurrencyOverview?league=" + Program.League + "&type=Currency&language=en");
             var data = currency.Currency.FromJson(result);
 
             double cat1 = 0.0, cat2 = 0.0, cat3 = 0.0, cat4 = 0.0, cat5 = 0.0, cat6 = 0.0, cat7 = 0.0;
