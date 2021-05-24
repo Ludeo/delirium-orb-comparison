@@ -10,9 +10,55 @@ namespace Delirium
     {
         public static string League { get; private set; }
 
-        public static void Main()
+        public static void Main(string[] args)
         {
-            League = "Ritual";
+            string leaguesString = new WebClient().DownloadString("https://api.pathofexile.com/leagues?type=main&compact=1");
+
+            List<Leagues> leagues = Leagues.FromJson(leaguesString);
+
+            leagues.RemoveAll(x => x.Id.Contains("SSF"));
+
+            if (args.Length != 0)
+            {
+                if (args[0].Equals("--league-names"))
+                {
+                    for (int j = 0; j < leagues.Count; j++)
+                    {
+                        Console.WriteLine(j + " - " + leagues[j].Id);
+                    }
+
+                    return;
+                }
+
+                if ((args[0].Equals("--league") || args[0].Equals("-l"))
+                 && args.Length != 1)
+                {
+                    if (int.TryParse(args[1], out int leagueNumber))
+                    {
+                        if (leagueNumber <= leagues.Count
+                         && leagueNumber >= 0)
+                        {
+                            League = leagues[leagueNumber].Id.Replace(" ", "%20");
+                        }
+                        else
+                        {
+                            Console.WriteLine("League does not exist. Start the program with the parameter --league-name to get a list of Leagues with their Number");
+
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not a Number. Start the program with the parameter --league-name to get a list of Leagues with their Number");
+
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                League = leagues[2].Id.Replace(" ", "%20");
+            }
 
             string result1 = new WebClient().DownloadString("https://poe.ninja/api/data/ItemOverview?league=" + League + "&type=Fossil&language=en");
             Fossil data1 = Fossil.FromJson(result1);
@@ -64,6 +110,8 @@ namespace Delirium
 
             int i = 1;
 
+            Console.WriteLine("League: " + League.Replace("%20", " "));
+            
             foreach ((double key, string value) in results)
             {
                 switch (i)

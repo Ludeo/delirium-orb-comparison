@@ -4,6 +4,11 @@ This program calculates how much you could earn from the different Delirium Orb 
 
 In order to run the program you need to download the winrar archive (found in the releases) and extract it. Then start the .exe and it will show you the results.
 
+## Console Parameters
+    --league-names: Shows the current Leagues with a number that you can use with --league and -l
+    --league: Lets you pick the league with the number that you get from --league-names
+    -l: same as --league
+
 Here is a preview of the program 
 
 

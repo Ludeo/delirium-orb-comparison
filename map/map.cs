@@ -30,6 +30,7 @@ namespace Delirium.map
         Atlas234,
         Blight,
         Delirium,
+        Delerium,
         Harvest,
         Legion,
         Metamorph,
@@ -38,6 +39,7 @@ namespace Delirium.map
         Synthesis,
         Heist,
         Ritual,
+        Ultimatum,
     }
 
     public partial class Map
@@ -325,6 +327,7 @@ namespace Delirium.map
                 "Atlas2-3.4" => Variant.Atlas234,
                 "Blight"     => Variant.Blight,
                 "Delirium"   => Variant.Delirium,
+                "Delerium"   => Variant.Delerium,
                 "Harvest"    => Variant.Harvest,
                 "Legion"     => Variant.Legion,
                 "Metamorph"  => Variant.Metamorph,
@@ -333,6 +336,7 @@ namespace Delirium.map
                 "Synthesis"  => Variant.Synthesis,
                 "Heist"      => Variant.Heist,
                 "Ritual"     => Variant.Ritual,
+                "Ultimatum"  => Variant.Ultimatum,
                 var _        => throw new Exception("Cannot unmarshal type Variant"),
             };
         }
@@ -365,6 +369,9 @@ namespace Delirium.map
                 case Variant.Delirium:
                     serializer.Serialize(writer, "Delirium");
                     return;
+                case Variant.Delerium:
+                    serializer.Serialize(writer, "Delerium");
+                    return;
                 case Variant.Harvest:
                     serializer.Serialize(writer, "Harvest");
                     return;
@@ -388,6 +395,9 @@ namespace Delirium.map
                     return;
                 case Variant.Ritual:
                     serializer.Serialize(writer, "Ritual");
+                    return;
+                case Variant.Ultimatum:
+                    serializer.Serialize(writer, "Ultimatum");
                     return;
                 default: throw new Exception("Cannot marshal type Variant");
             }
