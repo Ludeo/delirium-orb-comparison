@@ -9,6 +9,7 @@ In order to run the program you need to download the winrar archive (found in th
     --league: Lets you pick the league with the number that you get from --league-names
     -l: same as --league
 
+## Preview
 Here is a preview of the program 
 
 
@@ -18,6 +19,7 @@ The result has different colors, blue means it's the most profitable one, green 
 
 Of course the result is not 100% reliable since it's not using the official drop rates of items but a player experience who ran the map himself.
 
+## Other
 Special Thanks to https://github.com/hellsing for helping me out :)
 
 Link to the spreadsheet of Grimro: https://docs.google.com/spreadsheets/d/1QhHPQU6DCfNxxWxEonlJTJQLPY5wFTL-RfY61DL8bgM/edit#gid=1315504308
