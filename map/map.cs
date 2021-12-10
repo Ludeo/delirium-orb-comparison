@@ -40,6 +40,8 @@ namespace Delirium.map
         Heist,
         Ritual,
         Ultimatum,
+        Expedition,
+        Scourge,
     }
 
     public partial class Map
@@ -245,11 +247,7 @@ namespace Delirium.map
             {
                 "Glennach Cairns" => MapRegion.GlennachCairns,
                 "Haewark Hamlet"  => MapRegion.HaewarkHamlet,
-                "Lex Ejoris"      => MapRegion.LexEjoris,
-                "Lex Proxima"     => MapRegion.LexProxima,
                 "Lira Arthain"    => MapRegion.LiraArthain,
-                "New Vastir"      => MapRegion.NewVastir,
-                "Tirn's End"      => MapRegion.TirnSEnd,
                 "Valdo's Rest"    => MapRegion.ValdoSRest,
                 var _             => throw new Exception("Cannot unmarshal type MapRegion"),
             };
@@ -275,24 +273,8 @@ namespace Delirium.map
                     serializer.Serialize(writer, "Haewark Hamlet");
 
                     return;
-                case MapRegion.LexEjoris:
-                    serializer.Serialize(writer, "Lex Ejoris");
-
-                    return;
-                case MapRegion.LexProxima:
-                    serializer.Serialize(writer, "Lex Proxima");
-
-                    return;
                 case MapRegion.LiraArthain:
                     serializer.Serialize(writer, "Lira Arthain");
-
-                    return;
-                case MapRegion.NewVastir:
-                    serializer.Serialize(writer, "New Vastir");
-
-                    return;
-                case MapRegion.TirnSEnd:
-                    serializer.Serialize(writer, "Tirn's End");
 
                     return;
                 case MapRegion.ValdoSRest:
@@ -337,7 +319,9 @@ namespace Delirium.map
                 "Heist"      => Variant.Heist,
                 "Ritual"     => Variant.Ritual,
                 "Ultimatum"  => Variant.Ultimatum,
-                var _        => throw new Exception("Cannot unmarshal type Variant"),
+                "Expedition" => Variant.Expedition,
+                ", Gen-12" => Variant.Scourge,
+                var _ => throw new Exception("Cannot unmarshal type Variant"),
             };
         }
 
@@ -398,6 +382,12 @@ namespace Delirium.map
                     return;
                 case Variant.Ultimatum:
                     serializer.Serialize(writer, "Ultimatum");
+                    return;
+                case Variant.Expedition:
+                    serializer.Serialize(writer, "Expedition");
+                    return;
+                case Variant.Scourge:
+                    serializer.Serialize(writer, "Scourge");
                     return;
                 default: throw new Exception("Cannot marshal type Variant");
             }
