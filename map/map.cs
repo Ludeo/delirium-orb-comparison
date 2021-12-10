@@ -247,11 +247,7 @@ namespace Delirium.map
             {
                 "Glennach Cairns" => MapRegion.GlennachCairns,
                 "Haewark Hamlet"  => MapRegion.HaewarkHamlet,
-                "Lex Ejoris"      => MapRegion.LexEjoris,
-                "Lex Proxima"     => MapRegion.LexProxima,
                 "Lira Arthain"    => MapRegion.LiraArthain,
-                "New Vastir"      => MapRegion.NewVastir,
-                "Tirn's End"      => MapRegion.TirnSEnd,
                 "Valdo's Rest"    => MapRegion.ValdoSRest,
                 var _             => throw new Exception("Cannot unmarshal type MapRegion"),
             };
@@ -277,24 +273,8 @@ namespace Delirium.map
                     serializer.Serialize(writer, "Haewark Hamlet");
 
                     return;
-                case MapRegion.LexEjoris:
-                    serializer.Serialize(writer, "Lex Ejoris");
-
-                    return;
-                case MapRegion.LexProxima:
-                    serializer.Serialize(writer, "Lex Proxima");
-
-                    return;
                 case MapRegion.LiraArthain:
                     serializer.Serialize(writer, "Lira Arthain");
-
-                    return;
-                case MapRegion.NewVastir:
-                    serializer.Serialize(writer, "New Vastir");
-
-                    return;
-                case MapRegion.TirnSEnd:
-                    serializer.Serialize(writer, "Tirn's End");
 
                     return;
                 case MapRegion.ValdoSRest:
